@@ -18,23 +18,24 @@
 
 # 📌 Overview
 
-This project demonstrates a complete **Data Science workflow** by predicting IMDb movie ratings using regression algorithms.
+This project demonstrates a complete **Data Science workflow** for predicting IMDb movie ratings using regression algorithms.
 
-The objective is to analyze movie-related attributes, preprocess the dataset, engineer meaningful features, and build predictive models capable of estimating movie ratings.
+The project focuses on cleaning and preprocessing movie data, exploring relationships between different movie attributes, engineering useful features, training multiple regression models, and comparing their predictive performance.
 
-The project covers the complete Data Science lifecycle, including data preprocessing, visualization, feature engineering, model training, evaluation, prediction, and model persistence.
+The workflow includes data preprocessing, exploratory data analysis (EDA), feature engineering, model training, evaluation, feature importance analysis, and custom movie rating prediction.
 
 ---
 
 # 🎯 Objectives
 
 - Analyze the IMDb Movies India dataset
-- Clean and preprocess the data
-- Perform feature engineering
-- Encode categorical variables
+- Perform data preprocessing and cleaning
+- Handle missing values
+- Encode categorical features
 - Train multiple regression models
 - Compare model performance
 - Predict movie ratings
+- Save the trained model using Joblib
 
 ---
 
@@ -46,9 +47,9 @@ The dataset contains information about Indian movies collected from IMDb.
 
 - Genre
 - Director
-- Actor Names
+- Actors
 - Duration
-- Number of Votes
+- Votes
 - Release Year
 
 ### Target
@@ -59,16 +60,19 @@ The dataset contains information about Indian movies collected from IMDb.
 
 # 🚀 Project Workflow
 
-- Data Loading
+- Import Required Libraries
+- Load Dataset
 - Data Cleaning
-- Handling Missing Values
+- Handle Missing Values
 - Exploratory Data Analysis (EDA)
 - Data Visualization
 - Feature Engineering
 - Label Encoding
+- Train-Test Split
 - Model Training
 - Model Evaluation
-- Rating Prediction
+- Feature Importance Analysis
+- Movie Rating Prediction
 - Model Saving using Joblib
 
 ---
@@ -78,17 +82,17 @@ The dataset contains information about Indian movies collected from IMDb.
 The project includes visualizations such as:
 
 - Rating Distribution
-- Genre Analysis
+- Genre Distribution
 - Votes vs Rating
 - Correlation Heatmap
+- Feature Importance Chart
 - Model Performance Comparison
-- Feature Importance Analysis
 
 ---
 
 # 🤖 Regression Models
 
-The following regression models were implemented and compared:
+The following regression algorithms were implemented and evaluated:
 
 - Linear Regression
 - Decision Tree Regressor
@@ -100,26 +104,27 @@ The following regression models were implemented and compared:
 
 The models were evaluated using the **R² Score**.
 
-| Model | Performance |
-|--------|------------:|
-| Linear Regression | Good Baseline |
-| Decision Tree Regressor | Improved Performance |
-| Random Forest Regressor | ⭐ Best Performing Model |
+| Model | R² Score | Performance |
+|--------|---------:|-------------|
+| Linear Regression | **0.0881** | Good Baseline |
+| Decision Tree Regressor | **-0.3321** | Poor Performance |
+| Random Forest Regressor | **0.3464** | ⭐ Best Performing Model |
 
-**🏆 Best Model:** Random Forest Regressor
+🏆 **Best Model:** Random Forest Regressor
 
 ---
 
 # 💡 Key Insights
 
-- The number of votes was one of the most influential features affecting movie ratings.
-- Feature engineering and label encoding improved model performance.
-- Random Forest Regressor produced the most accurate predictions among the evaluated models.
-- Data visualization helped identify relationships between movie attributes and ratings.
+- The **Random Forest Regressor** achieved the best predictive performance among the evaluated models.
+- The **number of votes** was one of the most influential features affecting movie ratings.
+- Label Encoding enabled categorical variables such as genre, director, and actors to be used by regression models.
+- Feature engineering and preprocessing improved overall model performance.
+- The project demonstrates how different regression algorithms perform on real-world movie rating data.
 
 ---
 
-# 🛠️ Tech Stack
+# 🛠️ Technologies Used
 
 - Python
 - Pandas
@@ -137,7 +142,7 @@ The models were evaluated using the **R² Score**.
 Movie-Rating-Prediction/
 │
 ├── IMDb Movies India.csv
-├── MOVIE_RATING_PREDICTION.ipynb
+├── Movie_Rating_Prediction.ipynb
 └── README.md
 ```
 
@@ -160,21 +165,21 @@ pip install pandas numpy matplotlib scikit-learn joblib
 ### Launch the Notebook
 
 ```bash
-jupyter notebook MOVIE_RATING_PREDICTION.ipynb
+jupyter notebook Movie_Rating_Prediction.ipynb
 ```
 
-or open it directly in **Google Colab**.
+Or open the notebook directly in **Google Colab**.
 
 ---
 
 # 📈 Future Improvements
 
-- Hyperparameter Tuning
-- Cross Validation
-- Advanced Feature Engineering
-- Interactive Dashboard
-- Streamlit Web Application
-- Model Deployment using Flask/FastAPI
+- Improve feature engineering techniques
+- Apply Hyperparameter Tuning
+- Perform Cross Validation
+- Try Gradient Boosting and XGBoost models
+- Deploy the model using Streamlit
+- Build an interactive Movie Rating Prediction web application
 
 ---
 
@@ -204,7 +209,7 @@ If you found this project useful:
 
 ### 🎬 Thank you for visiting this repository!
 
-**If you found this project helpful, don't forget to leave a ⭐ Star!**
+If you found this project helpful, don't forget to leave a ⭐ Star!
 
 Made with ❤️ by **Sri Vadshan J**
 
